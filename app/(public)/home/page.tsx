@@ -161,36 +161,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── ABOUT SECTION ── */}
-      <section id="about" className="py-32 bg-white">
-        <div className="max-w-[1600px] mx-auto px-8 xl:px-16 text-center">
-          <h2 className="text-5xl font-extrabold text-gray-900 mb-8">About ePermits</h2>
-          <p className="text-gray-500 max-w-4xl mx-auto leading-relaxed text-xl">
-            The ePermits system is an initiative of the Department of Human
-            Settlements and Urban Development (DHSUD) to streamline the permit
-            application process for developers, corporations, and individuals.
-            Submit, pay, and track your permits entirely online.
-          </p>
-        </div>
-      </section>
-
-      {/* ── FOOTER ── */}
-      <footer className="bg-[#0F2461] text-white py-12">
-        <div className="max-w-[1600px] mx-auto px-8 xl:px-16 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-5">
-            <div className="w-16 h-16 relative flex-shrink-0 bg-white rounded-full p-1 shadow-md">
-              <Image src="/dhsud-logo.png" alt="DHSUD Logo" fill className="object-contain p-1" />
-            </div>
-            <div>
-              <p className="font-bold text-base">DEPARTMENT OF HUMAN SETTLEMENTS AND URBAN DEVELOPMENT</p>
-              <p className="text-sm text-blue-300 mt-1">Kagawaran ng Pananahanang Pantao at Pagpapaunlad ng Kalunsuran</p>
-            </div>
-          </div>
-          <div className="text-sm text-blue-300 font-medium">
-            © {new Date().getFullYear()} DHSUD. Republic of the Philippines. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
