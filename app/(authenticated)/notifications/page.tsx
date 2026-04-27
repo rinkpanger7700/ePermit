@@ -29,7 +29,7 @@ const NOTIF_TYPE_LABEL: Record<string, { label: string; color: string }> = {
 export default function NotificationsPage() {
   usePageTitle("NOTIFICATIONS / RESULTS");
   const { user } = useAuth();
-  const { notifications, markAsRead } = useNotifications(user?.id);
+  const { notifications, markAsRead, markAllAsRead } = useNotifications(user?.id);
   const [tab, setTab] = useState<Tab>("Notifications");
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
