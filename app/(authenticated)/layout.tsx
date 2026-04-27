@@ -79,9 +79,12 @@ function LayoutInner({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { SessionTimeout } from "@/components/ui/SessionTimeout";
+
 export default function AuthenticatedLayout({ children }: { children: React.ReactNode }) {
   return (
     <PageTitleProvider>
+      <SessionTimeout />
       <LayoutInner>{children}</LayoutInner>
     </PageTitleProvider>
   );

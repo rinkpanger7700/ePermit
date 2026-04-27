@@ -31,7 +31,12 @@ const features = [
   },
 ];
 
-export default function HomePage() {
+import { createClient } from "@/lib/supabase-server";
+
+export default async function HomePage() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       {/* ── TOP NAV ── */}
@@ -103,20 +108,40 @@ export default function HomePage() {
               ePermits is the online platform of DHSUD that allows you to apply,
               pay, and track your permit applications — no in-person visits needed.
             </p>
-            <div className="flex items-center gap-5">
-              <Link
-                href="/login?tab=register"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-[#1A3A8F] text-white font-bold rounded-2xl hover:bg-[#0F2461] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-lg"
-              >
-                Get Started
-                <ArrowRight className="w-6 h-6" />
-              </Link>
-              <Link
-                href="/login"
-                className="px-10 py-5 border-2 border-[#1A3A8F] text-[#1A3A8F] font-bold rounded-2xl hover:bg-[#E0E7FF] transition-all text-lg"
-              >
-                Login
-              </Link>
+            <div className="flex flex-wrap items-center gap-5">
+              {user ? (
+                <>
+                  <Link
+                    href="/dashboard"
+                    className="inline-flex items-center gap-3 px-10 py-5 bg-[#1A3A8F] text-white font-bold rounded-2xl hover:bg-[#0F2461] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-lg"
+                  >
+                    Go to Dashboard
+                    <ArrowRight className="w-6 h-6" />
+                  </Link>
+                  <Link
+                    href="/applications"
+                    className="px-10 py-5 border-2 border-[#1A3A8F] text-[#1A3A8F] font-bold rounded-2xl hover:bg-[#E0E7FF] transition-all text-lg"
+                  >
+                    My Applications
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/login?tab=register"
+                    className="inline-flex items-center gap-3 px-10 py-5 bg-[#1A3A8F] text-white font-bold rounded-2xl hover:bg-[#0F2461] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-lg"
+                  >
+                    Get Started
+                    <ArrowRight className="w-6 h-6" />
+                  </Link>
+                  <Link
+                    href="/login"
+                    className="px-10 py-5 border-2 border-[#1A3A8F] text-[#1A3A8F] font-bold rounded-2xl hover:bg-[#E0E7FF] transition-all text-lg"
+                  >
+                    Login
+                  </Link>
+                </>
+              )}
             </div>
           </div>
 
