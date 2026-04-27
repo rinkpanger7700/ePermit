@@ -225,11 +225,11 @@ export default function LoginPage() {
               <Image src="/dhsud-logo.png" alt="DHSUD Logo" fill className="object-contain" />
             </div>
             <div>
-              <p className="text-[10px] font-bold text-gray-400 leading-none uppercase tracking-wide">DHSUD</p>
-              <p className="text-sm font-extrabold text-[#1A3A8F] leading-tight">eServices Portal</p>
+              <p className="text-sm font-bold text-gray-400 leading-none uppercase tracking-wide">DHSUD</p>
+              <p className="text-xl font-extrabold text-[#1A3A8F] leading-tight">eServices Portal</p>
             </div>
-            <span className="w-px h-8 bg-gray-200 mx-1" />
-            <span className="text-lg font-extrabold text-[#2563EB]">ePermits</span>
+            <span className="w-px h-11 bg-gray-200 mx-2" />
+            <span className="text-3xl font-extrabold text-[#2563EB]">ePermits</span>
           </Link>
         </div>
       </header>

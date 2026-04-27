@@ -17,22 +17,23 @@ export function TopNav({ userName = "Applicant", userRole = "Applicant", unreadC
       {/* Brand */}
       <div className="flex items-center gap-3 flex-1">
         <div className="lg:hidden w-12" />
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="w-9 h-9 relative flex-shrink-0">
+        <Link href="/dashboard" className="hidden lg:flex items-center gap-4">
+          <div className="w-10 h-10 relative flex-shrink-0">
             <Image src="/dhsud-logo.png" alt="DHSUD Logo" fill className="object-contain" />
           </div>
           <div>
-            <span className="text-base font-extrabold text-[#1A3A8F]">ePermits</span>
-            <span className="text-gray-300 mx-2">|</span>
-            <span className="text-sm text-gray-500 font-medium">DHSUD eServices Portal</span>
+            <p className="text-xs font-bold text-gray-400 leading-none uppercase tracking-wide">DHSUD</p>
+            <p className="text-base font-extrabold text-[#1A3A8F] leading-tight">eServices Portal</p>
           </div>
-        </div>
-        <div className="lg:hidden flex items-center gap-3 ml-2">
+          <span className="w-px h-8 bg-gray-200 mx-1" />
+          <span className="text-2xl font-extrabold text-[#2563EB]">ePermits</span>
+        </Link>
+        <Link href="/dashboard" className="lg:hidden flex items-center gap-3 ml-2">
           <div className="w-8 h-8 relative flex-shrink-0">
             <Image src="/dhsud-logo.png" alt="DHSUD Logo" fill className="object-contain" />
           </div>
-          <span className="text-base font-extrabold text-[#2563EB]">ePermits</span>
-        </div>
+          <span className="text-lg font-extrabold text-[#2563EB]">ePermits</span>
+        </Link>
       </div>
 
       {/* Right section */}
