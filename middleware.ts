@@ -56,12 +56,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  // Redirect logged-in users away from login page
-  if (pathname === "/login" && user) {
-    const dashboardUrl = request.nextUrl.clone();
-    dashboardUrl.pathname = "/dashboard";
-    return NextResponse.redirect(dashboardUrl);
-  }
+  // Allow users to view the login page even if they are logged in.
+  // (Removed the redirect to /dashboard to fulfill user request)
 
   return supabaseResponse;
 }
