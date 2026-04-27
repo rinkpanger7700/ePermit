@@ -94,9 +94,7 @@ export default async function HomePage() {
         <div className="max-w-[1600px] mx-auto px-8 xl:px-16 py-24 flex flex-col lg:flex-row items-center gap-16 min-h-[600px]">
           {/* Left */}
           <div className="flex-1 max-w-3xl z-10">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-[#1A3A8F] text-xs font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-wide">
-              🇵🇭 Official DHSUD Portal
-            </div>
+
             <h1 className="text-4xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-6">
               Apply for your permits and track your applications{" "}
               <span className="text-[#1A3A8F]">online.</span>
