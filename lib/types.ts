@@ -19,9 +19,10 @@ export type ApplicationStatus =
 export type RequirementStatus = "Compliant" | "Incorrect File" | "Missing";
 export type PaymentStatus = "Pending" | "Paid" | "Expired";
 export type NotificationType =
-  | "Application Update"
-  | "Payment Reminder"
-  | "New Message";
+  | "application_update"
+  | "payment_reminder"
+  | "result_ready"
+  | "new_message";
 
 export interface Profile {
   id: string;
