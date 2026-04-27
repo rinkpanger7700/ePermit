@@ -88,9 +88,10 @@ export const APPLICANT_TYPES = [
 ];
 
 export const NOTIFICATION_TYPE_COLORS: Record<NotificationType, string> = {
-  "Application Update": "bg-green-100 text-green-700",
-  "Payment Reminder": "bg-yellow-100 text-yellow-700",
-  "New Message": "bg-blue-100 text-blue-700",
+  "application_update": "bg-green-100 text-green-700",
+  "payment_reminder": "bg-yellow-100 text-yellow-700",
+  "result_ready": "bg-blue-100 text-blue-700",
+  "new_message": "bg-blue-100 text-blue-700",
 };
 
 export const APPLICATION_TYPE_COLORS: Record<ApplicationType, { bg: string; icon: string }> = {
