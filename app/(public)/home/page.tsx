@@ -114,12 +114,6 @@ export default async function HomePage() {
                 Get Started
                 <ArrowRight className="w-6 h-6" />
               </Link>
-              <Link
-                href="/login"
-                className="px-10 py-5 border-2 border-[#1A3A8F] text-[#1A3A8F] font-bold rounded-2xl hover:bg-[#E0E7FF] transition-all text-lg"
-              >
-                Login
-              </Link>
             </div>
           </div>
 
